@@ -1,0 +1,49 @@
+{% extends "enrolment/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h4>Your Timetable</h4>
+
+    <div class="calendar-container">
+        <div class="header">
+            <ul class="days"> 
+                <li>Monday</li>
+                <li>Tuesday</li>
+                <li>Wednesday</li>
+                <li>Thursday</li>
+                <li>Friday</li>
+            </ul>
+        </div>
+
+        <div class="timeslots-container">
+            <ul class="timeslots">
+                <li>8am</li> 
+                <li>9am</li> 
+                <li>10am</li>
+                <li>11am</li>
+                <li>12am</li>
+                <li>1pm</li> 
+                <li>2pm</li> 
+                <li>3pm</li>
+                <li>4pm</li>
+                <li>5pm</li>
+                <li>6pm</li>
+            </ul>
+
+        </div>
+
+        <div class="event-container">
+            
+            <div class="slot slot-1" style="padding: 5px;">
+                Defence against dark arts
+            </div>
+            <div class="slot slot-2" style="padding: 5px;">
+                <span>Potions</span>
+                <p style="font-size:small;">(Lecture)</p>
+                <span style="font-size:small;"><i>South Lecture Hall</i></span>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

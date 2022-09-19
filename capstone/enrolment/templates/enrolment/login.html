@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<h2 style="margin-left: 20px; margin-right: 20px;">Login</h2>
+<h2 style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">Login</h2>
 
 {% if message %}
     <div style="color: red; margin-left: 20px; margin-right: 20px;">{{ message }}</div>
@@ -19,7 +19,7 @@
     <input class="btn btn-primary" type="submit" value="Login">
 </form>
 
-<div style="margin-left: 20px; margin-right: 20px;">
+<div style="margin-left: 20px; margin-right: 20px; margin-top: 10px;">
     Don't have an account? <a href="{% url 'register' %}">Register here.</a>
 </div>
 

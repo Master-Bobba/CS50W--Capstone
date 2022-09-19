@@ -1,0 +1,94 @@
+li {
+    list-style: none
+}
+
+ul {
+    margin:0;
+    padding:0;
+}
+
+.calendar-container {
+    margin-left:25px;
+    margin-right:25px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto;
+    gap:1px 1px;
+    grid-template-areas: 
+    ". header"
+    "timeslots-container main"
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.days{
+    background: white;
+}
+
+.header{
+    background: white;
+    grid-area: header;
+    text-align: center;
+}
+
+.timeslots-container {
+    grid-area: timeslots-container;
+    justify-content: left;
+}
+
+.timeslots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeslots li {
+    min-height: 60px;
+
+}
+
+.timeslots li::after{
+    content: "";
+    position: absolute;
+    left: 10px;
+    width: 100%;
+    height: 1px;
+    z-index: 1;
+    background: lightgrey;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(44, 1fr);
+    grid-area: main;
+    position:relative;
+}
+
+.slot {
+    position:absolute;
+    background: lightseagreen;
+    z-index: 5;
+    color: white;
+    font-size: 14px;
+}
+
+.slot-1{
+    height: 120px;
+    width: 50%;
+
+    grid-row: 5;
+    grid-column:4;
+}
+
+.slot-2{
+    height:120px;
+    width: 20%;
+    
+    grid-row: 1;
+    grid-column: 1;
+    background-color: purple;
+}
